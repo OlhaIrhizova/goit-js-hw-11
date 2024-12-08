@@ -15,8 +15,8 @@ a {
   text-decoration: none;
 }
 .container{
-  width: 1128px;
-  margin: 0 156px;
+  max-width: 1128px;
+  margin: 0 auto;
 }
 
 
@@ -81,7 +81,7 @@ a {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 24px;
-  margin: 0 px;
+  margin: 0;
 }
 
 .gallery-item {
@@ -112,7 +112,7 @@ a {
   border-bottom: 1px solid #808080;
   border-left: 1px solid #808080;
   border-right: 1px solid #808080;
- 
+  height: 48px;
 }
 
 .stats{

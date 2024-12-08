@@ -16,6 +16,7 @@ a {
 }
 .container{
   width: 1128px;
+  margin: 0 156px;
 }
 
 
@@ -29,7 +30,7 @@ a {
     height: 40px;
     margin-top: 36px;
     margin-bottom: 32px;
-    margin-left: 336px;
+    margin-left: 534px;
     }
 
 .search-input{
@@ -80,7 +81,7 @@ a {
   flex-wrap: wrap;
   column-gap: 24px;
   row-gap: 24px;
-  margin: 0 156px;
+  margin: 0 px;
 }
 
 .gallery-item {

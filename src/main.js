@@ -6,13 +6,17 @@ import { fetchImages } from './js/pixabay-api';
 import { createGallery, showLoader, hideLoader } from './js/render-functions';
 
 
- const lightbox = new SimpleLightbox('.gallery a');
+
+
+
 
 const searchForm = document.querySelector(".search-form");
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".search-input");
 const gallery = document.querySelector('.gallery');
 
+
+ const lightbox = new SimpleLightbox('.gallery a');
 
 function renderGallery(images) {
      

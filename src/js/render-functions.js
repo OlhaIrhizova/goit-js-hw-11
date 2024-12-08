@@ -1,8 +1,9 @@
 
  export function createGallery(array) {
     return array.map(item =>
-        `<li class="gallery-item">
-        <a class="gallery-link" href="${item.largeImageURL}">
+        `
+        <li class="gallery-item">
+       <a class="gallery-link" href="${item.largeImageURL}">
           <img
             class="gallery-image"
             src = "${item.webformatURL}"

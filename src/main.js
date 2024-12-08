@@ -2,10 +2,11 @@ import iziToast from "izitoast";
 import "izitoast/dist/css/iziToast.min.css";
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
-
 import { fetchImages } from './js/pixabay-api';
-import { createGallery , showLoader, hideLoader } from './js/render-functions';
+import { createGallery, showLoader, hideLoader } from './js/render-functions';
 
+
+ const lightbox = new SimpleLightbox('.gallery a');
 
 const searchForm = document.querySelector(".search-form");
 const searchButton = document.querySelector(".search-button");
@@ -56,7 +57,7 @@ function hendlerSearch(event) {
             }
         })
         .catch(error => {
-            console.error(error);
+            console.log(error);
         })
         .finally(() => {
             hideLoader(); 

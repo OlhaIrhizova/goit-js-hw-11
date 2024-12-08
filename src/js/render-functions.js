@@ -1,8 +1,5 @@
-import SimpleLightbox from 'simplelightbox';
-import "simplelightbox/dist/simple-lightbox.min.css";
- const lightbox = new SimpleLightbox('.gallery a');
 
-   export function createGallery(array) {
+ export function createGallery(array) {
     return array.map(item =>
         `<li class="gallery-item">
         <a class="gallery-link" href="${item.largeImageURL}">

@@ -105,6 +105,7 @@ a {
 
 .info{
   display: flex;
+  justify-content:space-around;
   font-weight: 400;
   font-size: 12px;
   line-height: 2;
@@ -120,8 +121,10 @@ a {
       justify-content: center;
       align-items: center;
       flex-direction: column;
-      height: 100%;
       text-align: center;
+      width: 34px;
+      height: 40px;
+ 
 }
 
 .loader {

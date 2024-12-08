@@ -4,12 +4,24 @@ import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
 
 import { fetchImages } from './js/pixabay-api';
-import { createGallery ,renderGallery, showLoader, hideLoader } from './js/render-functions';
+import { createGallery , showLoader, hideLoader } from './js/render-functions';
 
 
 const searchForm = document.querySelector(".search-form");
 const searchButton = document.querySelector(".search-button");
 const input = document.querySelector(".search-input");
+const gallery = document.querySelector('.gallery');
+
+
+function renderGallery(images) {
+     
+     gallery.innerHTML = '';
+     gallery.innerHTML = createGallery(images);
+  
+
+ 
+  lightbox.refresh();
+}
 
 
 
@@ -28,6 +40,8 @@ function hendlerSearch(event) {
     }
 
     showLoader();
+
+     gallery.innerHTML = '';
     
 
     fetchImages(searchQuery)

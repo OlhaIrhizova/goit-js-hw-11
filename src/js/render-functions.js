@@ -1,6 +1,6 @@
 import SimpleLightbox from 'simplelightbox';
 import "simplelightbox/dist/simple-lightbox.min.css";
-
+ const lightbox = new SimpleLightbox('.gallery a');
 
    export function createGallery(array) {
     return array.map(item =>
@@ -9,33 +9,23 @@ import "simplelightbox/dist/simple-lightbox.min.css";
           <img
             class="gallery-image"
             src = "${item.webformatURL}"
-            data-source = "${item.largeImageURL}"
-            alt="${item.tags}"
+            alt = "${item.tags}"
+            loading = "lazy"
             width = "360"
             />
         </a>
 
-        <div class="image-stats">
-                    <span class="stats">Likes: ${item.likes}</span>
-                    <span class="stats">Views: ${item.views}</span>
-                    <span class="stats">Comments: ${item.comments}</span>
-                    <span class="stats">Downloads: ${item.downloads}</span>
+        <div class="info">
+                    <p class="info-item"><b>Likes ${item.likes}</b></p>
+                    <p class="info-item"><b>Views ${item.views}</b></p>
+                    <p class="info-item"><b>Comments ${item.comments}</b></p>
+                    <p class="info-item"><b>Downloads ${item.downloads}</b></p>
                 </div>
 
       </li> `
     ).join('');
 
 }
-export function renderGallery(images) {
-const gallery = document.querySelector('.gallery'); 
-  gallery.innerHTML = createGallery(images);
-  
-
-  const lightbox = new SimpleLightbox('.gallery a');
-  lightbox.refresh();
-}
-
-
 
 
 export const showLoader = () => {

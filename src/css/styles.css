@@ -88,8 +88,6 @@ a {
   width: calc((100% - 48px) / 3);
   transition: transform .3s;
   position: relative;
-  overflow: hidden;
-  
 }
 
 .gallery-item:hover,
@@ -102,7 +100,7 @@ a {
   
 }
 
-.image-stats{
+.info{
   display: flex;
   font-weight: 400;
   font-size: 12px;
@@ -112,10 +110,10 @@ a {
   border-bottom: 1px solid #808080;
   border-left: 1px solid #808080;
   border-right: 1px solid #808080;
-  height: 48px;
+  
 }
 
-.stats{
+.info-item{
   display: flex;
   align-items: center;
   justify-content: flex-start;
